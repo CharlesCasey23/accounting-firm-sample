@@ -1,7 +1,7 @@
 {
   "name": "accounting-firm-sample",
   "description": "Informational website sample of an accounting firm",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
