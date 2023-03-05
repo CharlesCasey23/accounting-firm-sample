@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#__next {
+  height: inherit;
+}
+
+.navbar-icons {
+  width: 52px;
+}
+
+.hero {
+  height: 350px;
+  width: 100%;
+}
+
+.container {
+  width: 360px;
+}
+
+.content {
+  width: 360px;
+}
+
+.service-tiles {
+  z-index: 1;
+}
+
+.about-image {
+  position: relative;
+  width: 100vw;
+  min-height: 280px;
+  z-index: 1;
+}
+
+.content-image {
+  width: 100%;
+  height: 280px;
+}
+
+.feature-accent {
+  position: absolute;
+  top: 280px;
+  height: 16px;
+  width: 100vw;
+}
+
+.feature-accent-right {
+  position: absolute;
+  left: 0;
+  top: 208px;
+  width: 100%;
+  height: 72px;
+}
+
+.footer-content-container {
+  width: 360px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    height: 130px;
+  }
+
+  .dropdown {
+    padding-top: 130px;
+  }
+
+  .dropdown-controls {
+    width: 335px;
+  }
+
+  .dropdown-items {
+    width: 545px;
+  }
+
+  .dropdown-cta {
+    width: 250px;
+  }
+
+  .main-content-padding {
+    padding-top: 130px;
+  }
+  
+  .hero {
+    height: 420px;
+  }
+
+  .moblie-service-tiles-bg {
+    height: 220px;
+  }
+
+  .content-container {
+    width: 1190px;
+  }
+
+  .content-image {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .content {
+    width: 465px;
+  }
+
+  .about-image {
+    position: relative;
+    width: 580px;
+    height: 350px;
+    z-index: 1;
+  }
+
+  .get-started {
+    min-height: 500px;
+  }
+
+  .insight-column {
+    max-width: 380px;
+  }
+
+  .insight-card {
+    min-height: 374px;
+  }
+
+  .feature-accent {
+    right: 0;
+    bottom: -12px;
+    height: 116px;
+    width: 50%;
+  }
+
+  .feature-accent-right {
+    position: absolute;
+    width: 52%;
+    height: 116px;
+    top: inherit;
+    bottom: 0;
+  }
+
+  .footer-content-container {
+    width: 970px;
+  }
+}
+
+.main-nav-link-text {
+  padding-bottom: 24px;
+}
+
+.main-nav-link:hover .nav-link-stripe {
+  display: block;
+}
+
+.main-nav-link:hover .main-nav-link-text {
+  padding-bottom: 16px;
+}
+
+.active-nav-link .nav-link-stripe {
+  display: block;
+}
+
+.active-nav-link .main-nav-link-text {
+  padding-bottom: 16px;
+}
+
+.services-tile:hover .services-tile-stripe {
+  display: block;
+}
+
+.second-level-dropdown {
+  min-height: 100vh;
+}
