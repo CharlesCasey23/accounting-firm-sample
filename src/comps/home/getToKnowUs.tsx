@@ -8,7 +8,7 @@ const GetToKnowUs: React.FC = () => {
     <div className='relative md:mb-14'>
       <div className='content-container flex flex-col md:flex-row md:justify-between md:mx-auto'>
         <div>
-          <img className='content-image' src={AccountantsMeetingImage.src} />
+          <img className='content-image' src={AccountantsMeetingImage.src} alt='Accountants having a meeting' />
         </div>
         <div className='content flex flex-col justify-center mt-6 mb-12 text-center mx-auto md:justify-start md:text-start md:mx-0 md:my-16'>
           <div className='flex justify-center md:justify-start'>

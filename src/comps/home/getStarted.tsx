@@ -16,7 +16,7 @@ const GetStarted: React.FC = () => {
               YOU ARE THE FOCUS
             </div>
           </div>
-          <div className={`${gelasio.className} text-3xl text-dark-blue md:text-4xl`}>What's your goals?</div>
+          <div className={`${gelasio.className} text-3xl text-dark-blue md:text-4xl`}>What&apos;s your goals?</div>
           <div className={`${normalRaleway.className} mt-6 text-base text-slate-800 md:text-2xl`}>
             To help you get where you want to go by bring equilibrium.
           </div>

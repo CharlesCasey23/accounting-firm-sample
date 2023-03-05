@@ -178,6 +178,7 @@ export const MobileDropdown: React.FC<{ mainLinks: MainLinkDataType[]; }> = ({ m
         <div className='h-full w-full'>
           {mainLinks.map(({ title, dropDownData }, index) => (
             <MainMobileDropdownlink
+              key={`${index}-${title}`}
               title={title}
               chevron={!!dropDownData}
               onSelect={() => onSelect(index)}

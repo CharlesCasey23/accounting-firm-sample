@@ -17,7 +17,7 @@ const About: React.FC = () => {
           <div className={`${gelasio.className} text-3xl text-dark-blue md:text-4xl`}>Our passion is aiding you.</div>
           <div className={`${normalRaleway.className} mt-6 text-base text-slate-800 md:text-2xl`}>
             For our customers, our employees, and our communities, we are dedicated to providing possibilities.
-            Together, as one family, we're trying to make those chances available.
+            Together, as one family, we&apos;re trying to make those chances available.
           </div>
           <span className='mt-10'>
             <Button text='Why Choose Us?' />

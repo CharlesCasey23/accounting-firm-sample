@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                   <li className='mb-2'>Sample Company Wealth Advisors, LLC disclaimers</li>
                   <li className='mb-2'>
                     &#169; {year} Copyright Sample Company. All rights reserved.
-                    "Sample Company" refer to Sample Company LLP.
+                    &quot;Sample Company&quot; refer to Sample Company LLP.
                   </li>
                   <li className='mb-2'>
                     Investment advisory services are offered through Sample Company  Wealth Advisors,
