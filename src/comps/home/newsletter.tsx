@@ -9,7 +9,7 @@ const Newsletter: React.FC = () => {
         <div className={`${gelasio.className} flex justify-center w-full text-3xl text-dark-blue md:text-4xl`}>
           Reap the Benefits of Our Promises
         </div>
-        <div className={`${normalRaleway.className} w-fit mt-2 text-base text-slate-800 md:text-2xl`}>
+        <div className={`${normalRaleway.className} mt-2 text-base text-slate-800 md:text-2xl`}>
           Unique insights and information delivery to your inbox
         </div>
         <div className='flex flex-row mt-5 justify-center'>
