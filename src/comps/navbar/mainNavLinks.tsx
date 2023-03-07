@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
-import TeamGetTogether from 'public/images/team-get-together.jpg' 
-import FinancialPlanning from 'public/images/financial-planning.jpg' 
+import TeamGetTogether from 'public/images/team-get-together.jpg'
+import FinancialPlanning from 'public/images/financial-planning.jpg'
 import Outdoors from 'public/images/outdoors.jpg'
 import { subHeadingRaleway } from '@/styles/fonts';
 
@@ -28,9 +28,11 @@ type MainNavLinkProps = {
   onSelect: () => void;
 };
 
-type MainNavLinksProps = { 
-  linkData: MainLinkDataType[], 
-  onSelect: (index: number) => void 
+type MainNavLinksProps = {
+  linkData: MainLinkDataType[],
+  searchIsOpen: boolean;
+  onSelect: (index: number) => void;
+  onSearch: () => void;
 };
 
 export const mainLinkData: MainLinkDataType[] = [
@@ -134,7 +136,7 @@ const MainNavLink: React.FC<MainNavLinkProps> = ({ title, onSelect, chevron = fa
   )
 }
 
-const MainNavLinks: React.FC<MainNavLinksProps> = ({ linkData, onSelect }) => {
+const MainNavLinks: React.FC<MainNavLinksProps> = ({ linkData, searchIsOpen, onSelect, onSearch }) => {
   return (
     <div className='flex flex-row justify-between'>
       {linkData && linkData.map(({ title, active, dropDownData }, index) => (
@@ -145,8 +147,15 @@ const MainNavLinks: React.FC<MainNavLinksProps> = ({ linkData, onSelect }) => {
           chevron={!!dropDownData}
           onSelect={() => onSelect(index)} />
       ))}
-      <div className={`pb-4 ${subHeadingRaleway.className} text-2xl`}>
-        <i className='fa-solid fa-magnifying-glass'></i>
+      <div
+        className={`w-6 pb-4 ${subHeadingRaleway.className} text-2xl text-center`}
+        onClick={onSearch}
+      >
+        {searchIsOpen ? (
+          <i className='fa-solid fa-xmark'></i>
+        ) : (
+          <i className='fa-solid fa-magnifying-glass'></i>
+        )}
       </div>
     </div>
   )

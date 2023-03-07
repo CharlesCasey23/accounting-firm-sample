@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useMobileMenu } from '@/context';
+import { useAppState } from '@/context';
 import { DesktopDropdown, MobileDropdown } from './dropdowns';
 import MainNavLinks, { mainLinkData, MainLinkDataType } from './mainNavLinks'
 import SecondaryNavLinks from './secondaryNavLinks';
 import Logo from 'public/logo.png';
+import { Searchbar } from '../common';
 
 export const Navbar: React.FC = () => {
-  const { isOpen, toggleMenu } = useMobileMenu();
+  const { isOpen, toggleMenu } = useAppState();
   const [activeLinkIndex, setActiveLinkIndex] = useState(-1);
   const [mainLinks, setMainLinks] = useState<MainLinkDataType[]>(mainLinkData);
+  const [openSearchbar, setOpenSearchbar] = useState(false);
   const currentDropdownData = mainLinks[activeLinkIndex]?.dropDownData;
   const openDropDown = activeLinkIndex > -1 && currentDropdownData ? true : false;
 
@@ -27,6 +29,11 @@ export const Navbar: React.FC = () => {
       setActiveLinkIndex(index);
     }
     setMainLinks(updatedLinks)
+  }
+
+  const onSearch = () => {
+    console.log('Clicked')
+    if (!openDropDown) setOpenSearchbar(!openSearchbar);
   }
 
   return (
@@ -47,17 +54,23 @@ export const Navbar: React.FC = () => {
           </div>
           <div className='hidden text-dark-blue md:flex md:flex-col md:h-full md:w-8/12 md:justify-between'>
             <SecondaryNavLinks />
-            <MainNavLinks linkData={mainLinks} onSelect={onSelect} />
+            <MainNavLinks linkData={mainLinks} searchIsOpen={openSearchbar} onSelect={onSelect} onSearch={onSearch} />
           </div>
         </div>
-        <div className='flex'>
-          <div className='navbar-icons flex px-3 justify-center items-center md:hidden'>
-            <i className='fa-solid fa-magnifying-glass fa-2x text-dark-blue'></i>
-          </div>
+        <div
+          className='navbar-icons flex px-3 justify-center items-center text-dark-blue md:hidden'
+          onClick={onSearch}
+        >
+          {openSearchbar ? (
+            <i className='fa-solid fa-xmark fa-2x'></i>
+          ) : (
+            <i className='fa-solid fa-magnifying-glass fa-2x'></i>
+          )}
         </div>
       </div>
       <MobileDropdown mainLinks={mainLinks} />
       {openDropDown && currentDropdownData && <DesktopDropdown dropdownData={currentDropdownData} />}
+      {openSearchbar && <Searchbar />}
     </>
   )
 }

@@ -10,7 +10,7 @@ const GetToKnowUs: React.FC = () => {
         <div>
           <img className='content-image' src={AccountantsMeetingImage.src} alt='Accountants having a meeting' />
         </div>
-        <div className='content flex flex-col justify-center mt-6 mb-12 text-center mx-auto md:justify-start md:text-start md:mx-0 md:my-16'>
+        <div className='mobile-container flex flex-col justify-center mt-6 mb-12 text-center mx-auto md:justify-start md:text-start md:mx-0 md:my-16'>
           <div className='flex justify-center md:justify-start'>
             <div className={`${headingRaleway.className} w-fit text-sm text-dark-blue pb-2 mb-6 border-b-4 border-b-accent-dark-green md:text-base`}>
               CUSTOMER EXPERIENCE

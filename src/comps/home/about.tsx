@@ -8,7 +8,7 @@ const About: React.FC = () => {
       <div className='content-container flex flex-col md:flex-row-reverse md:justify-between md:mx-auto'>
         <img className='about-image' src={WorkImage.src} />
         <div className='feature-accent bg-accent-green'></div>
-        <div className='content mx-auto pt-12 flex flex-col justify-center text-center md:text-start md:pt-0'>
+        <div className='mobile-container mx-auto pt-12 flex flex-col justify-center text-center md:text-start md:pt-0'>
           <div className='flex justify-center md:justify-start'>
             <div className={`${headingRaleway.className} w-fit text-sm text-dark-blue pb-2 mb-6 border-b-4 border-b-accent-dark-green md:text-base`}>
               OPPORTUNITY OVERFLOWS

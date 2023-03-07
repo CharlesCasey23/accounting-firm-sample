@@ -10,7 +10,7 @@ const GetStarted: React.FC = () => {
           <img className='content-image' src={PortraitImage.src} />
           <div className='feature-accent-right bg-green-transparent'></div>
         </div>
-        <div className='content flex flex-col justify-center text-center pt-7 pb-12 mx-auto md:mx-0 md:text-start'>
+        <div className='mobile-container flex flex-col justify-center text-center pt-7 pb-12 mx-auto md:mx-0 md:text-start'>
           <div className='flex justify-center md:justify-start'>
             <div className={`${headingRaleway.className} w-fit text-sm text-dark-blue pb-2 mb-6 border-b-4 border-b-accent-dark-green md:text-base`}>
               YOU ARE THE FOCUS

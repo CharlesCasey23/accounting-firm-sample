@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { subHeadingRaleway } from '@/styles/fonts';
-import { useMobileMenu } from '@/context';
+import { useAppState } from '@/context';
 
 const SocialLink: React.FC<{ href: string; icon: string; }> = ({ href, icon }) => {
   return (
@@ -13,12 +13,12 @@ const SocialLink: React.FC<{ href: string; icon: string; }> = ({ href, icon }) =
 }
 
 const Footer: React.FC = () => {
-  const { isOpen } = useMobileMenu();
+  const { isOpen } = useAppState();
   const year = new Date().getFullYear();
   return (
     <div className={`${isOpen ? 'hidden' : ''} flex flex-col text-white`}>
       <div className='py-4 md:py-9 bg-light-blue'>
-        <div className='flex justify-center content-container md:mx-auto'>
+        <div className='w-full flex justify-center mobile-container content-container mx-auto'>
           <SocialLink href='/' icon='linkedin' />
           <SocialLink href='/' icon='square-twitter' />
           <SocialLink href='/' icon='square-facebook' />
@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
           <SocialLink href='/' icon='instagram' />
         </div>
       </div>
-      <div className='py-6 px-2 md:py-14 bg-dark-blue'>
-        <div className='flex flex-col content-container md:mx-auto'>
+      <div className='py-6 md:py-14 bg-dark-blue'>
+        <div className='flex flex-col mobile-container content-container mx-auto'>
           <div className='footer-content-container mx-auto'>
             <div className='flex flex-row flex-wrap md:flex-nowrap'>
               <div className='flex flex-col flex-grow mr-8 md:w-48 md:flex-grow-0'>

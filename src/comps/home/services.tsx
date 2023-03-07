@@ -26,7 +26,7 @@ const Services: React.FC = () => {
   ]
   return (
     <div className='relative -mt-8 md:-mt-12'>
-      <div className='container content-container flex flex-col w-screen md:flex-row mx-auto md:justify-between'>
+      <div className='mobile-container content-container flex flex-col w-screen md:flex-row mx-auto md:justify-between'>
         {servicesTiles.map((serviceTile, index) => (
           <ServicesTile key={`${index}-${serviceTile.title}`} {...serviceTile} />
         ))}

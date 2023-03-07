@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useMobileMenu } from '@/context';
+import { useAppState } from '@/context';
 import Hero from '@/comps/home/hero';
 import Services from '@/comps/home/services';
 import About from '@/comps/home/about';
@@ -7,9 +7,10 @@ import GetStarted from '@/comps/home/getStarted';
 import Insights from '@/comps/home/insights';
 import GetToKnowUs from '@/comps/home/getToKnowUs';
 import Newsletter from '@/comps/home/newsletter';
+import { NewUserModal } from '@/comps/common';
 
 const Home: React.FC = () => {
-  const { isOpen } = useMobileMenu();
+  const { isFirstTimeUser, isOpen } = useAppState();
   const mobileMenuDisplay = isOpen ? 'hidden' : '';
 
   return (
@@ -29,6 +30,7 @@ const Home: React.FC = () => {
         <GetToKnowUs />
         <Newsletter />
       </main>
+      {isFirstTimeUser && <NewUserModal />}
     </>
   )
 }

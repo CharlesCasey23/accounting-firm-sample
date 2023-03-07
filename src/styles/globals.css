@@ -27,12 +27,8 @@ body {
   width: 100%;
 }
 
-.container {
-  width: 360px;
-}
-
-.content {
-  width: 360px;
+.mobile-container {
+  width: 345px;
 }
 
 .service-tiles {
@@ -67,7 +63,7 @@ body {
 }
 
 .footer-content-container {
-  width: 360px;
+  width: 345px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -89,6 +85,10 @@ body {
 
   .dropdown-cta {
     width: 250px;
+  }
+
+  .searchbar-container {
+    margin-top: 130px;
   }
 
   .main-content-padding {

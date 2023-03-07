@@ -1,4 +1,4 @@
-import { useMobileMenu } from "@/context";
+import { useAppState } from "@/context";
 import { headingRaleway, normalRaleway, subHeadingRaleway } from "@/styles/fonts";
 import { useEffect, useState } from "react";
 import { MainLinkDataType, MainLinkDropdownDataType } from "./mainNavLinks";
@@ -163,7 +163,7 @@ const SecondLevelDropdown: React.FC<SecondLevelDropdownProps> = ({ tabs, onSelec
 }
 
 export const MobileDropdown: React.FC<{ mainLinks: MainLinkDataType[]; }> = ({ mainLinks }) => {
-  const { isOpen } = useMobileMenu();
+  const { isOpen } = useAppState();
   const [activeIndex, setActiveIndex] = useState(-1);
   const activeDropdownData = mainLinks[activeIndex]?.dropDownData;
   const openSecondLevel = activeIndex > -1 && activeDropdownData ? true : false;

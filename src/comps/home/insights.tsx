@@ -112,7 +112,7 @@ const Insights: React.FC = () => {
 
   return (
     <div className='w-full pt-8 pb-16 bg-off-white md:py-14'>
-      <div className='container content-container mx-auto'>
+      <div className='mobile-container content-container mx-auto'>
         <div className={`pb-2 mb-6 border-b-4 border-border-colour ${subHeadingRaleway.className} text-3xl text-dark-blue`}>
           Insights
         </div>
